@@ -1,7 +1,5 @@
 package com.github.rmannibucau.calculator;
 
-import org.apache.deltaspike.core.api.config.view.ViewConfig;
-
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -17,12 +15,12 @@ public class Controller implements Serializable {
 
     private Computation computation = new Computation();
 
-    public Class<? extends ViewConfig> computeResult() {
+    public Class<? extends Pages> computeResult() {
         reporter.incComputations();
         return Pages.Result.class;
     }
 
-    public Class<? extends ViewConfig> getHome() {
+    public Class<? extends Pages> getHome() {
         return Pages.Home.class;
     }
 
