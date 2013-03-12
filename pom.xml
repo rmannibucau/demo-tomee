@@ -11,28 +11,21 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.openejb</groupId>
-      <artifactId>tomee-catalina</artifactId>
-      <version>1.6.0-SNAPSHOT</version>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-juli</artifactId>
+      <version>7.0.37</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.apache.myfaces.core</groupId>
-      <artifactId>myfaces-impl</artifactId>
-      <version>2.1.10</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.openejb</groupId>
-      <artifactId>tomee-myfaces</artifactId>
-      <version>1.6.0-SNAPSHOT</version>
-      <scope>provided</scope>
-    </dependency>
-
     <dependency>
       <groupId>org.apache.openejb</groupId>
       <artifactId>javaee-api</artifactId>
       <version>6.0-4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-api</artifactId>
+      <version>2.1.10</version>
       <scope>provided</scope>
     </dependency>
 
@@ -135,6 +128,12 @@
         <configuration>
           <simpleLog>true</simpleLog>
           <context>ROOT</context>
+          <systemVariables>
+            <com.sun.management.jmxremote />
+            <com.sun.management.jmxremote.ssl>false</com.sun.management.jmxremote.ssl>
+            <com.sun.management.jmxremote.port>1234</com.sun.management.jmxremote.port>
+            <com.sun.management.jmxremote.authenticate>false</com.sun.management.jmxremote.authenticate>
+          </systemVariables>
         </configuration>
       </plugin>
     </plugins>
