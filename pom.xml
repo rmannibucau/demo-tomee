@@ -12,26 +12,46 @@
   <dependencies>
     <dependency>
       <groupId>org.apache.openejb</groupId>
+      <artifactId>tomee-catalina</artifactId>
+      <version>1.6.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.myfaces.core</groupId>
+      <artifactId>myfaces-impl</artifactId>
+      <version>2.1.10</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
+      <artifactId>tomee-myfaces</artifactId>
+      <version>1.6.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
       <artifactId>javaee-api</artifactId>
       <version>6.0-4</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.deltaspike.core</groupId>
-      <artifactId>deltaspike-core-api</artifactId>
-      <version>0.4-incubating-SNAPSHOT</version>
+      <groupId>org.apache.deltaspike.modules</groupId>
+      <artifactId>deltaspike-jsf-module-api</artifactId>
+      <version>${deltaspike.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.deltaspike.core</groupId>
-      <artifactId>deltaspike-core-api</artifactId>
-      <version>0.4-incubating-SNAPSHOT</version>
+      <groupId>org.apache.deltaspike.modules</groupId>
+      <artifactId>deltaspike-jsf-module-impl</artifactId>
+      <version>${deltaspike.version}</version>
+      <scope>runtime</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.openejb</groupId>
-      <artifactId>arquillian-openejb-embedded-4</artifactId>
-      <version>${openejb.version}</version>
+      <artifactId>arquillian-tomee-remote</artifactId>
+      <version>${tomee.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -122,8 +142,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <min-java.version>7</min-java.version>
-    <openejb.version>4.6.0-SNAPSHOT</openejb.version>
+    <min-java.version>6</min-java.version>
+
+    <deltaspike.version>0.4-incubating-SNAPSHOT</deltaspike.version>
     <tomee.version>1.6.0-SNAPSHOT</tomee.version>
   </properties>
 
